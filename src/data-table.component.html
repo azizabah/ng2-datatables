@@ -1,0 +1,48 @@
+<div *ngIf="items.length !== 0" class="panel panel-default" >
+    <div class="panel-heading" >
+        {{labels?.tableHeader}}
+    </div>
+    <div class="panel-body">
+
+        <div class="row">
+
+            <div *ngFor="let control of columnsArray" >
+                <button class="btn btn-primary" type="button">
+                    <i class="fa fa-plus"></i>
+                </button>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-sm-6 form-inline">
+                <page-size [pageSize]="pageSize" [pageSizes]="pageSizeArray" [labels]="labels.pageSize"
+                           (selectedPageSize)="setPageSize($event)" ></page-size>
+            </div>
+
+            <div class="col-sm-6">
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12" >
+                <items-table [pageNumber]="pageNumber" [pageSize]="pageSize" [items]="items" [columns]="columns"
+                             [showIndex]="showIndex" [labels]="labels.table" ></items-table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4" >
+                <results-info [pageNumber]="pageNumber" [pageSize]="pageSize" [resultsNumber]="items.length" [labels]="labels.resultsInfo" ></results-info>
+            </div>
+            <div class="col-sm-8 pagination-col" >
+                <pagination [pageSize]="pageSize" [pageNumber]="pageNumber" [resultsNumber]="items.length" [labels]="labels.pagination"
+                (selectedPageNumber)="setPageNumber($event)" ></pagination>
+            </div>
+        </div>
+
+    </div>
+</div>

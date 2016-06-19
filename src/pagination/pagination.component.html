@@ -1,0 +1,25 @@
+<ul class="pagination">
+    <li [ngClass]="previousButtonClass()">
+        <a (click)="changePage(-1)"
+           [attr.aria-label]="label?.previous" >
+            <span aria-hidden="true">{{labels?.previous}}</span>
+        </a>
+    </li>
+
+    <li *ngIf="pageNumber > 3" ><a (click)="changePage(-3)" >{{pageNumber - 3}}</a></li>
+    <li *ngIf="pageNumber > 2" ><a (click)="changePage(-2)" >{{pageNumber - 2}}</a></li>
+    <li *ngIf="pageNumber > 1" ><a (click)="changePage(-1)" >{{pageNumber - 1}}</a></li>
+
+    <li class="active" ><a (click)="changePage(0)" >{{pageNumber}}</a></li>
+
+    <li *ngIf="pageNumber  < getTotalPageNumber(resultsNumber, pageSize)" ><a (click)="changePage(1)" >{{pageNumber + 1}}</a></li>
+    <li *ngIf="pageNumber + 1 < getTotalPageNumber(resultsNumber, pageSize)" ><a (click)="changePage(2)" >{{pageNumber + 2}}</a></li>
+    <li *ngIf="pageNumber + 2 < getTotalPageNumber(resultsNumber, pageSize)" ><a (click)="changePage(3)" >{{pageNumber + 3}}</a></li>
+
+    <li [ngClass]="nextButtonClass()">
+        <a (click)="changePage(1)"
+            [attr.aria-label]="label?.next">
+            <span aria-hidden="true">{{labels?.next}}</span>
+        </a>
+    </li>
+</ul>
