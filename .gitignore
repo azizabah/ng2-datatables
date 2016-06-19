@@ -6,6 +6,7 @@
 /dist/
 /node_modules/
 /coverage/
+/demo/dist
 
 /src/*.js
 /src/**/*.js

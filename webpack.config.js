@@ -2,18 +2,15 @@ const webpack = require('webpack');
 
 
 module.exports = {
+  target: 'web',
+  cache: true,
 
   entry: {
-
-    //'polyfills': './src/polyfills.ts',
-    //'vendor': './src/vendor.ts',
-    //'main': './src/main.browser.ts'
-
+    'app': './demo/main.ts'
   },
 
-
   output: {
-    path: __dirname + "/.." + "/dist", publicPath: 'dist/', filename: "bundle.js"
+    path: __dirname + "/demo/dist", publicPath: '', filename: "bundle.js"
   },
 
   resolve: {
@@ -56,8 +53,7 @@ module.exports = {
 
     plugins: [
       new webpack.optimize.CommonsChunkPlugin({
-        //name: helpers.reverse(['polyfills', 'vendor', 'main']),
-        name: ['main', 'vendor', 'polyfills'],
+        name: ['app'],
         minChunks: Infinity
       }),
 

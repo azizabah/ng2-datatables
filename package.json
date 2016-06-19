@@ -1,7 +1,7 @@
 {
   "name": "ng2-datatables",
   "version": "0.0.1",
-  "description": "Datatables for Angular2",
+  "description": "DataTables for Angular2",
   "author": "Łukasz Pawełczak <lukasz.pawelczak.dev@gmail.com>",
   "keywords": [
     "angular2",
