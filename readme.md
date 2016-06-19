@@ -5,18 +5,19 @@
 
 ## Quick Start
 
-```
-npm install ng2-datatables --save
-```
+
+[comment]: <>```
+[comment]: <>npm install ng2-datatables --save
+[comment]: <>```
 
 ## Build
 
-```
-npm install
-npm run typings
+[comment]: <>```
+[comment]: <>npm install
+[comment]: <>npm run typings
 
-npm run test // Karma unit tests
-```
+[comment]: <>npm run test // Karma unit tests
+[comment]: <>```
 
 
 ## License:
