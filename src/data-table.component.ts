@@ -42,6 +42,16 @@ import {OptionsConverter} from './options/options.converter';
 })
 export class DataTableComponent {
 
+    public columns: DtColumnModel[] = [];
+
+    // TODO rename
+    public columnsArray: DtControlsComponent[] = [];
+
+    public cols: QueryList<DtColumnComponent>;
+
+    public controls: QueryList<DtControlsComponent>;
+
+    private _options: Options = new Options();
 
     @Input()
     set options(options: any) {
@@ -77,16 +87,6 @@ export class DataTableComponent {
         this.options.pageNumber = +page;
     }
 
-    private _options: Options = new Options();
-
-    public columns: DtColumnModel[] = [];
-
-    // TODO rename
-    public columnsArray: DtControlsComponent[] = [];
-
-    public cols: QueryList<DtColumnComponent>;
-
-    public controls: QueryList<DtControlsComponent>;
 
     constructor(
         private labelsService: LabelsService,

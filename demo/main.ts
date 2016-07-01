@@ -6,7 +6,7 @@ require('zone.js/dist/long-stack-trace-zone');
 
 import 'rxjs/Rx';
 import { bootstrap } from '@angular/platform-browser-dynamic';
-import { AppComponent } from './app.component';
+import { AppComponent } from './src/app.component';
 
 
 bootstrap(AppComponent, []);

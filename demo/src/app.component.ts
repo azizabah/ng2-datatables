@@ -1,12 +1,11 @@
 import {Component} from '@angular/core';
-import {SimpleExampleComponent} from './src/simple-example.component';
+
+import {SimpleExampleComponent} from './simple-example/simple-example.component';
+
 
 @Component({
     selector: 'app',
-    template: `
-    <h1>Simple Example:</h1>
-    <simple-example></simple-example>
-    `,
+    template:  require('./app.component.html'),
     directives: [
         SimpleExampleComponent
     ]

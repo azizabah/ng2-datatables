@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {DATA_TABLE_DIRECTIVES} from '../../src/data_table_directives';
+import {DATA_TABLE_DIRECTIVES} from '../../../src/data_table_directives';
 
 
 @Component({
