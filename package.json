@@ -25,7 +25,20 @@
     "test": "npm run karma"
   },
   "dependencies": {
-    "ng2-pagination": "^0.3.0"
+    "@angular/common": "2.0.0-rc.1",
+    "@angular/compiler": "2.0.0-rc.1",
+    "@angular/core": "2.0.0-rc.1",
+    "@angular/http": "2.0.0-rc.1",
+    "@angular/platform-browser": "2.0.0-rc.1",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.1",
+    "@angular/platform-server": "2.0.0-rc.1",
+    "@angular/router-deprecated": "2.0.0-rc.1",
+    "core-js": "^2.2.2",
+    "lodash": "^4.6.1",
+    "ng2-pagination": "^0.3.0",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.6",
+    "zone.js": "^0.6.12"
   },
   "devDependencies": {
     "@angular/common": "2.0.0-rc.1",
@@ -59,7 +72,6 @@
     "karma-webpack": "1.7.0",
     "lodash": "^4.6.1",
     "ng2-bs3-modal": "^0.6.1",
-    "ng2-translate": "^2.1.0",
     "node-sass": "^3.4.2",
     "phantomjs-polyfill": "0.0.2",
     "phantomjs-prebuilt": "^2.1.7",

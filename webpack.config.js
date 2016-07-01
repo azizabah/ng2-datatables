@@ -2,15 +2,13 @@ const webpack = require('webpack');
 
 
 module.exports = {
-  target: 'web',
-  cache: true,
 
   entry: {
-    'app': './demo/main.ts'
+    'main': './demo/main.ts'
   },
 
   output: {
-    path: __dirname + "/demo/dist", publicPath: '', filename: "bundle.js"
+    path: __dirname + "/demo/dist", publicPath: __dirname + "/demo/dist", filename: "bundle.js"
   },
 
   resolve: {
@@ -75,8 +73,5 @@ module.exports = {
       resourcePath: 'src'
     }
   }
-
-
-
-
+  
 };
