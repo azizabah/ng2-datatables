@@ -270,7 +270,7 @@ describe('PageSizeComponent', () => {
         );
     });
 
-    describe('labels prefix & sufix', () => {
+    xdescribe('labels prefix & sufix', () => {
 
         it('should have default values',
             inject([TestComponentBuilder], (tcb: TestComponentBuilder) => {
