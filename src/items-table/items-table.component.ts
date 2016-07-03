@@ -2,7 +2,7 @@ import {Component, Input} from '@angular/core';
 import {PaginatePipe, PaginationService} from 'ng2-pagination';
 
 import {DtColumnModel} from '../dt-column/dt-column.model';
-import {CustomTemplateDirective} from "./custom-template.directive";
+import {CustomTemplateDirective} from './custom-template.directive';
 
 @Component({
     selector: 'items-table',

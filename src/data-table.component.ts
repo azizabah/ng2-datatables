@@ -51,41 +51,10 @@ export class DataTableComponent {
 
     public controls: QueryList<DtControlsComponent>;
 
+    @Input()
+    public items: any[] = [];
+
     private _options: Options = new Options();
-
-    @Input()
-    set options(options: any) {
-        this.options = this.optionsConverter.convert(options);
-    }
-
-    @Input()
-    items: any[] = [];
-
-    @Input()
-    set labels(labels: any) {
-        this.labelsService.setLabels(labels);
-        this.options.labels = this.labelsService.getLabels();
-    }
-
-    @Input()
-    set showIndex(val: boolean) {
-        this.options.showIndex = val;
-    }
-
-    @Input()
-    set pageSize(num: number) {
-        this.options.pageSize = +num;
-    }
-
-    @Input()
-    set pageSizeArray(sizes: number[]) {
-        this.options.pageSizeArray = sizes;
-    }
-
-    @Input()
-    set pageNumber(page: number) {
-        this.options.pageNumber = +page;
-    }
 
 
     constructor(
@@ -133,6 +102,37 @@ export class DataTableComponent {
 
     get showIndex(): boolean {
         return this.options.showIndex;
+    }
+
+    @Input()
+    set options(options: any) {
+        this._options = this.optionsConverter.convert(options);
+    }
+
+    @Input()
+    set labels(labels: any) {
+        this.labelsService.setLabels(labels);
+        this.options.labels = this.labelsService.getLabels();
+    }
+
+    @Input()
+    set showIndex(val: boolean) {
+        this.options.showIndex = val;
+    }
+
+    @Input()
+    set pageSize(num: number) {
+        this.options.pageSize = +num;
+    }
+
+    @Input()
+    set pageSizeArray(sizes: number[]) {
+        this.options.pageSizeArray = sizes;
+    }
+
+    @Input()
+    set pageNumber(page: number) {
+        this.options.pageNumber = +page;
     }
 
     setPageSize(size: number): void {

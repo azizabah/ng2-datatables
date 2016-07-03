@@ -1,6 +1,6 @@
 import {Directive, Input, TemplateRef, ViewContainerRef} from '@angular/core';
 
-@Directive({selector: '[customTemplate]'})
+@Directive({selector: '[custom-template]'})
 export class CustomTemplateDirective {
 
     constructor(
@@ -11,7 +11,7 @@ export class CustomTemplateDirective {
     @Input() set customTemplate(options: any) {
 
         this.viewContainer.clear();
-        
+
         if (options.template !== undefined) {
             this.viewContainer.createEmbeddedView(options.template, {
                 'data': options.data,

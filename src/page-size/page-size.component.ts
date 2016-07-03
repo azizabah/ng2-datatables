@@ -16,7 +16,7 @@ import {Component, Input, Output, EventEmitter} from '@angular/core';
                     [(ngModel)]="model.pageSize" 
                     (change)="change($event, ps.value)"
                     #ps >
-                <option *ngFor="let p of pageSizeArray"
+                <option *ngFor="#p of pageSizeArray"
                         [value]="p"
                         >{{p}}</option>
             </select>

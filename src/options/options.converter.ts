@@ -26,7 +26,7 @@ export class OptionsConverter {
             options.labels = rawData.labels;
         }
 
-        if (!options.pageSizeArray.find((c) => {return c === options.pageSize} )) {
+        if (!options.pageSizeArray.find((c) => {return c === options.pageSize; } )) {
             console.log('Error: pageSize should take a value from pageSizeArray.');
         }
 
